@@ -19,7 +19,7 @@ function hideRemoveRowForm() {
 function removeRowByNumber(rowNumber) { // When you add a row it will show the number in which you can use to remove it
     const table = document.getElementById('userTableBody');
     const rowIndex = rowNumber - 1;  
-    if (rowIndex >= 0 && rowIndex < table.rows.length) {
+    if (rowIndex >= 0 && rowIndex < table.rows.length) { // This is a loop, so it can be done multiple times
         table.deleteRow(rowIndex);
     }
 }
@@ -28,7 +28,7 @@ document.getElementById('inputForm').addEventListener('submit', function(event) 
     event.preventDefault();
     addRow();
     hideAddRowForm();
-});
+}); // after a user is added, it hides the form
 
 function addRow() { // This function pulls the elements by using textContent creates a form for the user to input his/her data and add them to the table
     const firstName = document.getElementById('inputFirst').value;
