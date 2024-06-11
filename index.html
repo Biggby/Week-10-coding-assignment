@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css" crossorigin="anonymous">
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Add Table</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4">User Table</h1>
+        <table class="table table-striped table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                </tr>
+            </thead>
+            <tbody id="userTableBody">
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <button class="btn btn-primary" onClick="showAddRowForm()"> <! simple buttons except they show the form, for their respected button remove/add>
+            Add Row
+        </button>
+
+        <button class="btn btn-danger" onClick="showRemoveRowForm()">
+            Remove Row
+        </button>
+
+        <div id="addRowForm" class="hidden mt-4"> <!  this is the code that opens up the form for a user to be added and allows inputs for each category >
+            <h2>Add a new row</h2>
+            <form id="inputForm">
+                <div class="form-group">
+                    <label for="inputFirst">First Name</label>
+                    <input type="text" class="form-control" id="inputFirst" required>
+                </div>
+                <div class="form-group">
+                    <label for="inputLast">Last Name</label>
+                    <input type="text" class="form-control" id="inputLast" required>
+                </div>
+                <div class="form-group">
+                    <label for="inputHandle">Handle</label>
+                    <input type="text" class="form-control" id="inputHandle" required>
+                </div>
+                <button type="button" class="btn btn-outline-success">Add Row</button>
+                <button type="button" class="btn btn-outline-secondary" onClick="hideAddRowForm()">Cancel</button>
+            </form>
+        </div>
+
+        <div id="removeRowForm" class="hidden"> <! Does not remove hardcoded rows >
+            <h2>Remove A Row</h2>
+            <form id="removeForm">
+                <div class="form-group">
+                    <label for="removeRowNumber">Row #</label>
+                    <input type="number" class="form-control" id="removeRowNumber" required>
+                </div>
+                <button type="submit" class="btn btn-danger">Remove Row</button>
+                <button type="button" class="btn btn-secondary" onClick="hideRemoveRowForm()">Cancel</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
