@@ -14,3 +14,11 @@ h1 {
 #userTableBody tr td {
     color: red; /* reads better than black*/
 }
+
+.btn-danger {
+    background-color: red !important;
+}
+
+.btn-outline-success {
+    color: rgb(9, 236, 9);
+}
