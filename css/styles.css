@@ -10,6 +10,7 @@ h1 {
     color: red
 }
 
-.button {
-    background-color: #1b2420
+#userTableBody tr th,
+#userTableBody tr td {
+    color: red; /* reads better than black*/
 }
